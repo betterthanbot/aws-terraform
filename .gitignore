@@ -30,3 +30,6 @@ override.tf.json
 
 # Exclude vars
 *.tfvars
+
+#hcl ignore
+.terraform.lock.hcl
