@@ -9,9 +9,9 @@ resource "aws_vpc" "vpc" {
   enable_dns_hostnames = var.enable_dns_hostnames
 
   tags = {
-    Name        = "${aws_vpc.name}" 
-    Terraform   = "${var.tagsTerraform}" 
-    Environment = "${var.tagsEnvironment}" 
+    Name        = "vpc" 
+#    Terraform   = "${var.tagsTerraform}" 
+#    Environment = "${var.tagsEnvironment}" 
   }
 }
 
@@ -21,9 +21,9 @@ resource "aws_vpc_dhcp_options" "vpc_dhcp" {
   domain_name_servers = var.domain_name_servers
 
   tags = {
-    Name        = "${aws_vpc_dhcp_options.name}" 
-    Terraform   = "${var.tagsTerraform}" 
-    Environment = "${var.tagsEnvironment}" 
+    Name        = "vpc_dhcp"
+#    Terraform   = "${var.tagsTerraform}" 
+#    Environment = "${var.tagsEnvironment}" 
   }
 }
 

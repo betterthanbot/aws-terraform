@@ -1,4 +1,4 @@
-variable "cidr_block " {
+variable "cidr_block" {
     type = string
     description = ""
 }
@@ -19,23 +19,19 @@ variable "domain_name" {
 }
 
 variable "domain_name_servers" {
-    type = string
+    type = list(string)
     description = ""
 }
-
-variable "tagsName" {
-    type = string
-    description = ""
-}
-
+/*
 variable "tagsTerraform" {
     type = string
     description = ""
-    value = "yes"
+    default = "true"
 }
 
 variable "tagsEnvironment" {
     type = string
     description = ""
-    value = "dev"
+    default = "dev"
 }
+*/
