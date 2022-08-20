@@ -1,19 +1,19 @@
 output "name" {
-    value = ""
-    description = ""
+  value       = ""
+  description = ""
 }
 
 output "name" {
-    value = ""
-    description = ""
+  value       = ""
+  description = ""
 }
 
 output "name" {
-    value = ""
-    description = ""
+  value       = ""
+  description = ""
 }
 
 output "name" {
-    value = ""
-    description = ""
+  value       = ""
+  description = ""
 }

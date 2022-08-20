@@ -1,10 +1,11 @@
 module "ec2_instance" {
-  source  = "./modules/aws_isntance"
+  source   = "./modules/aws_instance"
+
   for_each = toset(["one", "two", "three"])
 
-  name = "instance-${each.key}"
+  name     = "rhel-${each.key}"
 
-  ami                    = "ami-ebd02392"
-  instance_type          = "t2.micro"
-  key_name               = "default"
+  ami      = "ami-051f0947e420652a9"
+  key_name = "default"
+  tagName  = "rhel-${each.key}"
 }

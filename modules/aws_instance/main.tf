@@ -1,4 +1,4 @@
-terraform{
+terraform {
   required_version = ">= 1.2.0"
 }
 
@@ -17,9 +17,9 @@ resource "aws_instance" "instance" {
     volume_size = var.volume_size
     volume_type = var.volume_type
     encrypted   = true
-    }
+  }
 
-  tags {
-    name = "instance_module"
+  tags = {
+    Name = "${var.tagName}"
   }
 }

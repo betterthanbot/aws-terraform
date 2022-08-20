@@ -1,16 +1,16 @@
 variable "" {
-    type = string
-    description = ""
+  type        = string
+  description = ""
 }
 variable "" {
-    type = string
-    description = ""
+  type        = string
+  description = ""
 }
 variable "" {
-    type = string
-    description = ""
+  type        = string
+  description = ""
 }
 variable "" {
-    type = string
-    description = ""
+  type        = string
+  description = ""
 }
