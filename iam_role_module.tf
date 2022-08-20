@@ -16,5 +16,5 @@ module "iam_assumable_role_custom" {
   tags = {
     Role = "ssm-agent"
   }
-  
+
 }
