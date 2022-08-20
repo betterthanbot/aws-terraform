@@ -5,5 +5,4 @@ module "New_vpc" {
   enable_dns_hostnames = true
   domain_name          = "ap-southeast-1.compute.internal"
   domain_name_servers  = ["AmazonProvidedDNS"]
-
 }

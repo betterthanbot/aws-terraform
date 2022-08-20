@@ -10,7 +10,7 @@ variable "instance_type" {
 variable "associate_public_ip_address" {
     type = string
     description = ""
-    default = ""
+    default = ""    
 }
 variable "key_name" {
     type = string
@@ -19,6 +19,7 @@ variable "key_name" {
 variable "vpc_security_group_ids" {
     type = list(string)
     description = ""
+    default = ""
 }
 variable "iam_instance_profile" {
     type = string
@@ -33,8 +34,8 @@ variable "private_ip" {
 variable "subnet_id" {
     type = string
     description = ""
+    default = ""
 }
-
 
 #root volume
 variable "volume_size" {

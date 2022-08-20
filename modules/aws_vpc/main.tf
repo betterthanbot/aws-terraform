@@ -9,7 +9,7 @@ resource "aws_vpc" "vpc" {
   enable_dns_hostnames = var.enable_dns_hostnames
 
   tags = {
-    Name        = "vpc" 
+    Name        = "vpc_module" 
   }
 }
 
@@ -19,7 +19,7 @@ resource "aws_vpc_dhcp_options" "vpc_dhcp" {
   domain_name_servers = var.domain_name_servers
 
   tags = {
-    Name        = "vpc_dhcp"
+    Name        = "vpc_dhcp_module"
   }
 }
 

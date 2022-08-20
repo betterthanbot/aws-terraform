@@ -18,4 +18,8 @@ resource "aws_instance" "instance" {
     volume_type = var.volume_type
     encrypted   = true
     }
+
+  tags {
+    name = "instance_module"
+  }
 }
