@@ -106,8 +106,6 @@ variable "ipv6_addresses" {
   default     = null
 }
 
-
-
 #root volume
 variable "volume_size" {
   type        = number
