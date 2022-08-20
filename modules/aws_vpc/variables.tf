@@ -22,16 +22,3 @@ variable "domain_name_servers" {
     type = list(string)
     description = ""
 }
-/*
-variable "tagsTerraform" {
-    type = string
-    description = ""
-    default = "true"
-}
-
-variable "tagsEnvironment" {
-    type = string
-    description = ""
-    default = "dev"
-}
-*/

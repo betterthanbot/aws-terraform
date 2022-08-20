@@ -10,8 +10,6 @@ resource "aws_vpc" "vpc" {
 
   tags = {
     Name        = "vpc" 
-#    Terraform   = "${var.tagsTerraform}" 
-#    Environment = "${var.tagsEnvironment}" 
   }
 }
 
@@ -22,8 +20,6 @@ resource "aws_vpc_dhcp_options" "vpc_dhcp" {
 
   tags = {
     Name        = "vpc_dhcp"
-#    Terraform   = "${var.tagsTerraform}" 
-#    Environment = "${var.tagsEnvironment}" 
   }
 }
 

@@ -1,19 +1,4 @@
-output "name" {
-    value = ""
-    description = ""
-}
-
-output "name" {
-    value = ""
-    description = ""
-}
-
-output "name" {
-    value = ""
-    description = ""
-}
-
-output "name" {
-    value = ""
+output "instance" {
+    value = aws_instance.instance
     description = ""
 }
