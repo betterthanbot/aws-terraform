@@ -1,28 +1,34 @@
-resource "aws_vpc_dhcp_options" "gibson_dhcp" {
-  domain_name         = "ap-southeast-1.compute.internal"
-  domain_name_servers = ["AmazonProvidedDNS"]
-
-  tags = {
-    Name        = "gibson_dhcp",
-    Terraform   = "Yes",
-    Environment = "Dev"
-  }
-}
-
-resource "aws_vpc_dhcp_options_association" "gibson_dhcp_resolver" {
-  vpc_id          = aws_vpc.gibson_vpc.id
-  dhcp_options_id = aws_vpc_dhcp_options.gibson_dhcp.id
+terraform{
+  required_version = ">= 1.2.0"
 }
 
 #vpc
-resource "aws_vpc" "gibson_vpc" {
-  cidr_block           = "192.168.1.0/24"
-  instance_tenancy     = "default"
-  enable_dns_hostnames = true
+resource "aws_vpc" "vpc" {
+  cidr_block           = var.cidr_block
+  instance_tenancy     = var.instance_tenancy
+  enable_dns_hostnames = var.enable_dns_hostnames
 
   tags = {
-    Name        = "gibson_vpc",
-    Terraform   = "Yes",
-    Environment = "Dev"
+    Name        = "${aws_vpc.name}" 
+    Terraform   = "${var.tagsTerraform}" 
+    Environment = "${var.tagsEnvironment}" 
   }
 }
+
+#dhcp
+resource "aws_vpc_dhcp_options" "vpc_dhcp" {
+  domain_name         = var.domain_name
+  domain_name_servers = var.domain_name_servers
+
+  tags = {
+    Name        = "${aws_vpc_dhcp_options.name}" 
+    Terraform   = "${var.tagsTerraform}" 
+    Environment = "${var.tagsEnvironment}" 
+  }
+}
+
+resource "aws_vpc_dhcp_options_association" "vpc_dhcp_association" {
+  vpc_id          = aws_vpc.vpc.id
+  dhcp_options_id = aws_vpc_dhcp_options.vpc_dhcp.id
+}
+
