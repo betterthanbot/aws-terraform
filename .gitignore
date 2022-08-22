@@ -43,4 +43,4 @@ terraform.rc
 *.ppk
 
 #ignore secret folder
-*/secret/
+*secret
